@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Kahuna Restaurant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('hero-background.jpg'); /* Background image */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        header .logo img {
+            width: 100px;
+            height: 100px;
+        }
+
+        header h1 {
+            display: inline-block;
+            font-size: 50px;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ff6347;
+        }
+
+        .contact-section {
+            padding: 50px 0;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .contact-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff4500;
+        }
+
+        footer {
+          background-color: #333;
+          color: white;
+          text-align: center;
+          padding: 10px 0;
+          position: fixed;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Kahuna Logo">
+        </div>
+        <h1>Kahuna Restaurant</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="order.html" class="nav-link">Order</a></li>
+                <li><a href="contact.html" class="nav-link" style="background-color: grey; padding: 15px; padding-bottom: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <h2>Your Feedback Helps Us to Improve</h2>
+        <form class="contact-form" onsubmit="showMessage(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="tel" placeholder="Your Phone Number" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <p>Email: <a href="mailto:kahunarestaurant@gmail.com">kahunarestaurant@gmail.com</a></p>
+        <p>Phone: +91 98765 43210</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kahuna Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showMessage(event) {
+            event.preventDefault(); 
+            alert("Thank you"); 
+        }
+    </script>
+</body>
+</html>
